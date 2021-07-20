@@ -1,0 +1,263 @@
+// 通用部分
+
+::selection {
+  background-color: $pink;
+  color: $white;
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba($pink, 0.7);
+    box-shadow: 0 0 0 0 rgba($pink, 0.7)
+  }
+
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba($pink, 0);
+    box-shadow: 0 0 0 10px rgba($pink, 0)
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba($pink, 0);
+    box-shadow: 0 0 0 0 rgba($pink, 0)
+  }
+}
+
+@keyframes pulse-1 {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba($indigo, 0.7);
+    box-shadow: 0 0 0 0 rgba($indigo, 0.7)
+  }
+
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba($indigo, 0);
+    box-shadow: 0 0 0 10px rgba($indigo, 0)
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba($indigo, 0);
+    box-shadow: 0 0 0 0 rgba($indigo, 0)
+  }
+}
+
+// header 部分 
+
+.header-top-bar {
+  border-bottom: 1px solid #d8d8d8;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.telephone {
+  padding: .5rem 1rem;
+  // padding-right: .5rem !important;
+
+  a {
+    font-size: 12px;
+    color: black;
+    text-align: center;
+    display: block;
+    transition: .5s ease-in-out;
+  }
+}
+
+.telephone a:hover {
+  color: black;
+}
+
+.brand-logo {
+  display: block;
+  width: 120px;
+  min-height: 40px;
+  background-image: url("../images/logo/logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.qrcode {
+  margin: 20px;
+  display: block;
+  width: 204px;
+  min-height: 204px;
+  background-image: url("../images/logo/wechat-qrcode.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.foot_qrcode {
+  margin: 25px 0 15px 0;
+  display: block;
+  width: 80px;
+  min-height: 80px;
+  background-image: url("../images/logo/wechat-qrcode.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.mega-menu,
+.sub-menu {
+  margin: -1px 0;
+}
+
+.grid-view-five-column .col-3 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 20%;
+}
+
+.product-card {
+  padding: 0;
+  a {
+    text-align: center;
+  }
+  &::after {
+    bottom: 0;
+  }
+}
+
+.product-title {
+  max-width: none;
+}
+
+.service-icon {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  min-height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.polo-svg {
+  background-image: url("../images/svg/polo.svg");
+}
+
+.tshirt-svg {
+  background-image: url("../images/svg/tshirt.svg");
+}
+
+.fleence-svg {
+  background-image: url("../images/svg/fleence.svg");
+}
+
+.cap-svg {
+  background-image: url("../images/svg/cap.svg");
+}
+
+.categories-carousel5 {
+  position: relative;
+  border: 1px solid #ebebeb;
+  padding: 20px 10px;
+}
+
+// 分页
+
+.page-link-hover-disable:hover {
+  color: #1a2225;
+  background-color: #f6f6f6;
+  border-radius: 50% !important;
+  border-color: #f6f6f6;
+}
+
+// 文章sidebar最后一行加边线
+.list-group-flush>.list-group-item:last-child {
+  border-bottom-width: 1px !important;
+}
+
+
+.main-menu-phone{
+  top: 80px;
+  position: absolute;
+  right: 0;
+  background: $white;
+  width: 144px;
+  @include max-screen(575) {
+    width: 300px;
+  }
+
+  @include max-screen(380) {
+    right: -70px;
+  }
+
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 0 3.76px 0.24px $boxshadow;
+  transition: ease-in-out 0.3s;
+  z-index: 99;
+}
+
+.quick-link-item {
+  &:hover {
+    .main-menu-phone {
+      top: 100%;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.btn-pulse {
+    animation: pulse 2s infinite;
+    border-radius: 50px;
+    &:hover{
+      background-color: lighten($pink, 10%);
+      border-color: lighten($pink, 10%);
+    }
+}
+
+
+.phone-right {
+    // display: none;
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    z-index: 215;
+    color: #fff;
+    background: $indigo;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 100%;
+    font-size: 25px;
+    text-align: center;
+    transition: all .1s ease-in-out;
+    animation: pulse-1 2s infinite;
+    &:hover{
+      color: white;
+      background-color: $gray-600;
+    }
+}
+
+
+// #scrollUp{
+//   &:hover +.phone-right{ 
+    
+//       display: block;
+//       bottom: 100px;
+    
+//   }
+// }
+
+@media (max-width: 1500px) {
+  #scrollUp, .phone-right {
+    right: 20px;
+  }
+}
+@media (max-width: 650px) {
+  #scrollUp, .phone-right {
+    right: 10px;
+  }
+}
+
+
+
+
+
+
+

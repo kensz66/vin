@@ -1,0 +1,60 @@
+.service-section {
+}
+
+.services {
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 60px;
+}
+.service-item {
+  @include min-screen(768) {
+    padding: 10px 20px;
+  }
+  text-align: center;
+
+  &:hover {
+    .service-icon {
+      animation: tada 1s linear infinite;
+    }
+  }
+}
+
+.service-icon {
+  margin-bottom: 20px;
+}
+.service-title {
+  font-weight: 700;
+  color: $primary;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1.571;
+  margin-bottom: 5px;
+}
+
+@keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}

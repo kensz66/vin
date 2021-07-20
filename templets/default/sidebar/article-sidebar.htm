@@ -1,0 +1,53 @@
+<div class="col-xl-3 col-lg-4 mb-7">
+
+	<div class="widgets">
+		<!-- widget-card start -->
+		<div class="widget-card">
+			<h3 class="title"><span>相关参考</span></h3>
+			<div class="widget-list">
+
+				<ul class="list-group list-group-flush">
+					{dede:channel type='son' currentstyle="<li class='list-group-item py-2 px-6'><a class='text-warning'
+							href='~typelink~'>~typename~</a> </li>"}
+					<li class="list-group-item py-2 px-4">
+						<a class="text-dark" href='[field:typelink/]'>[field:typename/]</a>
+					</li>
+					{/dede:channel}
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- widget-card end -->
+		<!-- widget-card start -->
+		<div class="widget-card">
+			<h3 class="title"><span>推荐阅读</span></h3>
+			<!-- widget-post-list start -->
+			<div class="widget-post-list">
+				<div class="row g-1">
+					{dede:arclist row=8 orderby=click type='image.'}
+					<div class="col-12">
+						<a class="w-25" href="[field:arcurl/]" class="post-thumb">
+							[field:title function='html2text(@me)'/]
+						</a>
+					</div>
+					{/dede:arclist}
+				</div>
+			</div>
+			<!-- widget-post-list end -->
+		</div>
+		<!-- widget-card end -->
+
+		<!-- widget-card start -->
+		<div class="widget-card">
+			<h3 class="title"><span>TAG</span></h3>
+			<div class="widget-tags">
+				{dede:tag row='15' sort='new' getall='0'} <a class="widget-tag-link" href='[field:link/]'>[field:tag
+					/]</a>
+				{/dede:tag}
+			</div>
+		</div>
+		<!-- widget-card end -->
+
+	</div>
+
+</div>

@@ -1,0 +1,140 @@
+.checkout-cart {
+  top: 80px;
+  position: absolute;
+  right: 0;
+  background: $white;
+  width: 355px;
+  @include max-screen(575) {
+    width: 300px;
+  }
+
+  @include max-screen(380) {
+    right: -70px;
+  }
+
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 0 3.76px 0.24px $boxshadow;
+  transition: ease-in-out 0.3s;
+  z-index: 99;
+}
+
+
+.checkout-scroll {
+  max-height: 268px;
+  overflow-y: auto;
+}
+
+.checkout-cart-list {
+  padding: 20px;
+  border-bottom: 1px solid $borderColor;
+  display: flex;
+}
+.checkout-img {
+  margin: 0 20px 0 0;
+  position: relative;
+}
+.product-image {
+  align-items: flex-start;
+}
+.product-quantity {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  min-width: 25px;
+  padding: 0;
+  text-align: center;
+  background: $success;
+  color: $white;
+  font-size: 14px;
+  line-height: 1.785;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.checkout-block {
+  overflow: hidden;
+  text-align: left;
+  position: relative;
+  padding: 0 20px 0 0;
+  flex: 1;
+}
+.product-name {
+  display: block;
+  text-transform: capitalize;
+  font-size: 16px;
+  line-height: 20px;
+  color: $dark;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &:hover {
+    color: $success;
+  }
+}
+.product-price {
+  display: block;
+  margin: 10px 0 0;
+  font-weight: 400;
+  line-height: 1.666;
+  font-size: 16px;
+  color: $success;
+}
+.remove-cart {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: $body-color;
+  &:hover {
+    color: $dark;
+  }
+  padding: 3px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.166;
+}
+.product-size {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 5px 0 0;
+}
+.checkout-sub-total {
+  padding: 20px 20px;
+  margin-bottom: 20px;
+
+  .list-group-item {
+    text-transform: capitalize;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0px;
+    span {
+      font-weight: 500;
+      color: $body-color;
+      line-height: 1.923;
+    }
+    strong {
+      font-weight: 500;
+      color: $dark;
+      line-height: 1.923;
+    }
+  }
+}
+
+.checkout-action {
+  padding: 0px 20px 20px;
+}
+
+.quick-link-item {
+  &:hover {
+    .checkout-cart {
+      top: 100%;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

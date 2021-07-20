@@ -1,0 +1,47 @@
+.brand-carousel {
+  position: relative;
+  border: 1px solid #ebebeb;
+  padding: 20px 10px;
+
+  .common-swiper-button-next,
+  .common-swiper-button-prev {
+    top: 55%;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &:hover {
+    .common-swiper-button-next,
+    .common-swiper-button-prev {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .common-swiper-button-prev {
+    @include min-screen(1500) {
+      left: -20px;
+    }
+    left: 20px;
+  }
+  .common-swiper-button-next {
+    left: auto;
+
+    @include min-screen(1500) {
+      right: -20px;
+    }
+    right: 20px;
+  }
+}
+
+.brand-carousel-item {
+  a {
+    display: block;
+    text-align: center;
+  }
+
+  &:hover {
+    img {
+      transform: rotateY(360deg);
+      transition: all 0.6s linear;
+    }
+  }
+}

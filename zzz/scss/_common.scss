@@ -1,0 +1,198 @@
+/*----------------------------------------*/
+/*  01. Template default CSS
+/*----------------------------------------*/
+
+/*-- Google Font --*/
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+a {
+  text-decoration: none;
+}
+a,
+button {
+  &:focus-visible {
+    outline: none;
+  }
+  // transition: $transition-base;
+}
+
+button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+p {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  a {
+    color: inherit;
+    &:hover {
+      color: inherit;
+    }
+  }
+}
+
+/* Section TItle */
+.section-title {
+  margin-bottom: 20px;
+  & .title {
+    font-weight: 700;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    font-size: 22px;
+    @include min-screen(1200) {
+      font-size: 26px;
+    }
+    color: $dark;
+  }
+}
+.section-title.categories {
+  & .title {
+    font-size: 22px;
+  }
+}
+
+// badges style
+.badge {
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+// template space
+
+.section-mt {
+  margin-top: 70px;
+}
+.section-mb {
+  margin-bottom: 70px;
+}
+.section-pt {
+  padding-top: 70px;
+}
+.section-pb {
+  padding-bottom: 70px;
+}
+
+.common-swiper-button-next::after,
+.common-swiper-button-prev::after {
+  display: none;
+}
+
+.common-swiper-button-next,
+.common-swiper-button-prev {
+  top: -30px;
+  line-height: 1;
+  text-align: center;
+  color: $body-color;
+  width: 34px;
+  height: 34px;
+  border: 1px solid $borderColor;
+  background: $white;
+  z-index: 1;
+  opacity: 1;
+  transition: all 0.3s linear;
+  border-radius: 100%;
+  &:hover {
+    background: $success;
+    border-color: $success;
+    color: $white;
+  }
+}
+
+.common-swiper-button-prev {
+  left: auto;
+  right: 53px;
+}
+
+// banner-box-animation
+.banner-box-animation {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  &::before,
+  &::after {
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    pointer-events: none;
+    transition: all 0.3s linear;
+  }
+
+  &:hover {
+    &::before {
+      background: rgba(255, 255, 255, 0.1) none repeat scroll 0 0;
+      bottom: 50%;
+      top: 50%;
+    }
+
+    &::after {
+      background: rgba(255, 255, 255, 0.1) none repeat scroll 0 0;
+      left: 51%;
+      right: 50%;
+    }
+  }
+
+  img {
+    @include max-screen(767) {
+      width: 100%;
+    }
+  }
+}
+
+#scrollUp {
+  right: 50px;
+  bottom: 50px;
+  color: $white;
+  background: $success;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 100%;
+  font-size: 25px;
+  text-align: center;
+  transition: all 500ms ease-in-out;
+  &:hover {
+    background: #333;
+    color: $white;
+    box-shadow: 0 0 20px $white;
+  }
+}
+
+.map iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
+
+label {
+  margin-bottom: 10px;
+}
+.success {
+  color: $primary;
+}
+.error {
+  color: red;
+}

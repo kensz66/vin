@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<!-- head start -->
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+  <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+  <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+  <link rel="shortcut icon" href=" /32x32-favicon.ico" />
+  {dede:include filename="public/style.htm"/}
+</head>
+<!-- head end -->
+
+<body>
+  <!-- header section start -->
+  {dede:include filename="public/header.htm"/}
+  <!-- header section end -->
+
+  <!-- main content start -->
+
+  <!-- bread crumb section start -->
+  {dede:include filename="public/bread.htm"/}
+  <!-- bread crumb section end -->
+
+  <!-- shop product tab start-->
+  <div class="shop-product-tab section-mb">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-9">
+
+
+
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel">
+              <div class="row grid-view mb-n7">
+
+
+                {dede:list pagesize='12'}
+                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-7">
+                  <!-- product-card start -->
+                  <div class="product-card">
+                    <!-- <span class="badge bg-success product-badge">new</span> -->
+                    <div class="product-thumb-nail">
+                      [field:array runphp='yes']
+                      @me = (empty(@me['litpic']) ? "" : "<a href='{@me[' arcurl']}'><img
+                          class='product-image rounded-top rounded-5' src='{@me[' litpic']}' alt='{@me['
+                          title']}' /></a>");
+                      [/field:array]
+                      <ul class="actions">
+                        <li class="action quick-view">
+                          <button data-bs-toggle="modal" data-bs-target="#product-modal"><i
+                              class="las la-eye"></i></button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="product-content">
+                      <h3 class="product-title fw-normal text-center text-truncate"><a
+                          href="[field:arcurl/]">[field:title/]</a>
+                      </h3>
+                    </div>
+                  </div>
+                  <!-- product-card end -->
+                </div>
+                {/dede:list}
+
+                <!-- 分页列表 start -->
+                <div class="col-12 mt-7 mb-7">
+                  <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                      {dede:pagelist listitem="index,end,pre,next,pageno" listsize="5"/}
+                    </ul>
+                  </nav>
+                </div>
+                <!-- 分页列表 end -->
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        {dede:include filename="sidebar/article-sidebar.htm"/}
+
+
+      </div>
+
+    </div>
+  </div>
+  <!-- shop product tab end-->
+
+  <!-- main content end -->
+
+
+
+
+  <!-- footer section start -->
+  {dede:include filename="public/footer.htm"/}
+  <!-- footer section end -->
+
+  <!-- Modal -->
+  <!-- Scripts -->
+  <!-- Global Vendor, plugins JS -->
+
+  <!-- Vendor JS -->
+  {dede:include filename="public/script.htm"/}
+</body>
+
+</html>

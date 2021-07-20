@@ -1,0 +1,49 @@
+.static_info {
+  position: relative;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 70px;
+  margin-top: 70px;
+}
+
+.static_info .box_info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.static_info .icon_info {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  line-height: 64px;
+  background: #f7f7f7;
+  text-align: center;
+  font-size: 32px;
+  flex: 0 0 64px;
+  margin-right: 15px;
+  position: relative;
+  transition: all 300ms linear;
+}
+
+.static_info .box_info:hover .icon_info {
+  background: $success;
+  color: $white;
+}
+
+.static_info .txt_info {
+  flex: 1;
+}
+
+.static_info .txt_info .title {
+  color: $dark;
+  font-size: 16px;
+  @include max-screen(1199) {
+    font-size: 15px;
+  }
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 22px;
+  margin-bottom: 0;
+}

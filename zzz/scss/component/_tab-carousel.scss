@@ -1,0 +1,29 @@
+.tab-carousel {
+  position: relative;
+  border: 1px solid #ebebeb;
+  padding: 20px 10px;
+  .swiper-container {
+    .swiper-wrapper {
+    }
+  }
+
+  .common-swiper-button-next,
+  .common-swiper-button-prev {
+    @include max-screen(767) {
+      top: -75px;
+    }
+    @include max-screen(405) {
+      top: -105px;
+    }
+  }
+}
+
+.tab-carousel-item {
+  margin-bottom: -20px;
+}
+
+.product-tab-nav {
+  @include max-screen(991) {
+    margin-bottom: 20px;
+  }
+}

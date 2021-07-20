@@ -1,0 +1,130 @@
+// mega-menu
+
+.mega-menu {
+  text-align: left;
+  margin: 0px 7px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 3;
+  background: $white;
+  padding: 30px 15px;
+  box-shadow: 0 0 3.76px 0.24px $boxshadow;
+  -o-transform-origin: 0% 0%;
+  -ms-transform-origin: 0% 0%;
+  -moz-transform-origin: 0% 0%;
+  -webkit-transform-origin: 0% 0%;
+  transform-style: preserve-3d;
+  transform: rotateX(-75deg);
+  > li {
+    margin: 0;
+  }
+
+  li {
+    a {
+      display: inline-block;
+      text-align: left;
+      padding-bottom: 10px;
+      text-transform: capitalize;
+      transition: all 0.3s;
+    }
+    ul {
+      li {
+        margin: 0;
+        &.mega-menu-title {
+          margin-bottom: 20px;
+          a {
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 15px;
+            padding: 0 !important;
+            color: $dark;
+            &:hover {
+              color: $success;
+            }
+          }
+        }
+      }
+    }
+    > ul {
+      li {
+        &:last-child {
+          a {
+            padding-bottom: 0;
+          }
+        }
+        > {
+          a {
+            &:hover {
+              padding-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.bg-dark {
+  .mega-menu {
+    li {
+      a {
+        color: $body-color;
+        &:hover {
+          color: $success;
+        }
+      }
+    }
+  }
+}
+
+.header-botom-two {
+  .mega-menu {
+    li {
+      a {
+        color: $body-color;
+        &:hover {
+          color: $success;
+        }
+      }
+    }
+  }
+}
+.header-botom-three {
+  .mega-menu {
+    li {
+      a {
+        color: $body-color;
+        &:hover {
+          color: $success;
+        }
+      }
+    }
+  }
+}
+
+// On Hover Vissible Mega Menu
+
+.main-menu {
+  li {
+    &:hover > {
+      .mega-menu {
+        top: 59px;
+        opacity: 1;
+        visibility: visible;
+        transform: rotateX(0deg);
+        -o-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        -webkit-transform: rotateX(0deg);
+        -o-transition: -o-transform 0.3s, opacity 0.3s;
+        -ms-transition: -ms-transform 0.3s, opacity 0.3s;
+        -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+      }
+    }
+  }
+}

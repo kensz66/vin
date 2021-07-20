@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<!-- head start -->
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{dede:global.cfg_webname/}</title>
+    <link rel="shortcut icon" href=" /32x32-favicon.ico" />
+    {dede:include filename="public/style.htm"/}
+</head>
+<!-- head end -->
+
+<body>
+    <!-- header section start -->
+    {dede:include filename="public/header.htm"/}
+    <!-- header section end -->
+
+    <!-- main content start -->
+
+    <!-- Hero Slider Start -->
+
+    {dede:include filename="index/index-slider.htm"/}
+    <!-- Hero Slider End -->
+    <!-- static-info section start -->
+    <section class="static-info-section">
+        <div class="container">
+            <div class="row align-items-center justify-content-md-center">
+                <div class="col-12 col-sm-10 col-md-8 p-5">
+                    <h1 class="mt-5 pt-5 fs-3 fw-bolder text-center">
+                        南昌T恤、POLOT恤衫、文化衫、广告衫、卫衣、马甲和广告帽团体定做厂家</h1>
+                    <p class="text-center">
+                        江西麟飞服饰有限公司专业从事T恤、文化衫、卫衣线衫和广告帽的设计和生产，满足客户个性化定制需求，亦备有大量现货供应，协助企业和单位提升形象、改善劳动保护以及提高工作效率，我们专业专注，是您值得信赖的服装生产商。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="static-info-section">
+        <div class="container">
+            <div class="static_info my-4">
+
+
+                <div class="row ">
+                    <div class="col-sm-6 col-lg-3 mb-7">
+                        <a href="/view/products/polo-tshirt/">
+                            <div class="service-item">
+                                <span class="service-icon polo-svg"> </span>
+                                <h3 class="service-title">POLO衫/翻领T恤定制</h3>
+                                <p>座领POLOT恤，普通翻领POLOT恤，本布领POLO衫等，可镶色、绣花和印花、烫画等</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3 mb-7">
+                        <a href="/view/products/tshirt-made-to-order/">
+                            <div class="service-item">
+                                <span class="service-icon tshirt-svg"></span>
+                                <h3 class="service-title">圆领T恤/文化衫/广告衫定制</h3>
+                                <p>圆领T恤、V领T恤（心形领）、无领、立领T恤等</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3 mb-7">
+                        <a href="/view/products/fleece/">
+                            <div class="service-item">
+                                <span class="service-icon fleence-svg"></span>
+                                <h3 class="service-title">卫衣/卫裤/摇粒绒外套定制</h3>
+                                <p>连帽卫衣、圆领卫衣、开襟卫衣、半开襟卫衣、双层卫衣、卫裤、运动服、运动裤等</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3 mb-7">
+                        <a href="/view/products/others/">
+                            <div class="service-item">
+                                <span class="service-icon cap-svg"></span>
+                                <h3 class="service-title">帽子/马甲/围腰等</h3>
+                                <p>帽子、马甲、围腰（围裙）等</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- static-info section end -->
+    <!-- 公司介绍 start -->
+    {dede:include filename="index/index-about.htm"/}
+    <!-- 公司介绍 end -->
+    <!-- new arrival carousel section start -->
+    <section class="new-arrival-carousel-section section-mb">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2 class="title">重点推荐</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="new-arrival-carousel">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                {dede:arclist typeid ='4' row='8' titlelen='48' orderby='click'}
+                                <!-- swiper-slide start -->
+                                <div class="new-arrival-carousel-item swiper-slide">
+                                    <!-- product-card-list start -->
+                                    <div class="product-card-list">
+                                        <!-- product-card start -->
+                                        <div class="product-card">
+                                            <span class="badge bg-success product-badge">new</span>
+                                            <div class="product-thumb-nail">
+                                                <a href='[field:arcurl /]' title="[field:title function='htmlspecialchars(@me)'/] "><img src='[field:litpic/]' alt="[field:title function='htmlspecialchars(@me)'/] "></a>
+                                                <!-- <ul class="actions">
+                                                    <li class="action quick-view">
+                                                        <button data-bs-toggle="modal"
+                                                            data-bs-target="#product-modal"><i
+                                                                class="las la-eye"></i></button>
+                                                    </li>
+                                                </ul> -->
+                                            </div>
+                                            <div class="product-content">
+                                                <h3 class="product-title fw-normal text-center">[field:textlink/]</h3>
+                                            </div>
+                                        </div>
+                                        <!-- product-card end -->
+                                    </div>
+ 
+                                    <!-- product-card-list end -->
+                                    
+                                </div>
+                                <!-- swiper-slide end-->
+                                {/dede:arclist}
+
+                            </div>
+
+                        </div>
+
+                        <!-- swiper navigation -->
+                        <div class="swiper-button-prev common-swiper-button-prev">
+                            <i class="las la-angle-left"></i>
+                        </div>
+                        <div class="swiper-button-next common-swiper-button-next">
+                            <i class="las la-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- new arrival carousel section end -->
+
+    <!-- main banner section start -->
+    <div class="main-banner-section section-mt section-mb">
+        <div class="container">
+            <div class="row mb-n7">
+                <div class="col-sm-6 mb-7">
+                    <a href="/view/products/tshirt-made-to-order/" class="banner-box-animation">
+                        <img src="/assets/images/banner/tshirt.jpg" alt="images_not_found"></a>
+                </div>
+                <div class="col-sm-6 mb-7">
+                    <a href="/view/products/polo-tshirt/" class="banner-box-animation">
+                        <img src="/assets/images/banner/polo.jpg" alt="images_not_found"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main banner section end -->
+
+    <!-- Product 产品列表 section start -->
+    <section class="section-mb">
+        {dede:channelartlist typeid ='4'}
+    
+        <div class="shop-product-tab section-mb">
+            <div class="container">
+                <h3 class="fs-5 fw-bold"><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+                </h3>
+                <div class="tab-content border-top border-top-1 p-5 " id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel">
+                        <div class="row grid-view mb-n7">
+                            {dede:arclist row='8' titlelen='48' orderby='click'}
+                            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-7">
+                                <!-- product-card start -->
+                                <div class="product-card">
+                                    <span class="badge bg-success product-badge"></span>
+                                    <div class="product-thumb-nail">
+                                         <a href='[field:arcurl /]' title="[field:title function='htmlspecialchars(@me)'/] "><img src='[field:litpic/]' alt="[field:title function='htmlspecialchars(@me)'/] "></a>
+                                        <!-- <ul class="actions">
+                                            <li class="action quick-view">
+                                                <button data-bs-toggle="modal" data-bs-target="#product-modal"><i
+                                                        class="las la-eye"></i></button>
+                                            </li>
+                                        </ul> -->
+                                    </div>
+                                    <div class="product-content">
+                                        <h3 class="product-title fw-normal text-center">[field:textlink/]</h3>
+                                        <div class="product-price-wrapp">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- product-card end -->
+                            </div>
+                            {/dede:arclist}
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        {/dede:channelartlist}
+    </section>
+    <!-- Product 产品列表 section end -->
+
+    <!-- brand carousel start -->
+    <div class="brand-carousel-section section-mt section-mb">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="brand-carousel">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <!-- swiper-slide start -->
+                                <div class="brand-carousel-item swiper-slide">
+                                    <img src="/images/client/01.jpg" alt="体彩" />
+                                </div>
+                                <!-- swiper-slide end-->
+                                <!-- swiper-slide start -->
+                                <div class="brand-carousel-item swiper-slide">
+                                    <img src="/images/client/02.jpg" alt="中水四局" />
+                                </div>
+                                <!-- swiper-slide end-->
+                                <!-- swiper-slide start -->
+                                <div class="brand-carousel-item swiper-slide">
+                                    <img src="/images/client/03.jpg" alt="中石油" />
+                                </div>
+                                <!-- swiper-slide end-->
+                                <!-- swiper-slide start -->
+                                <div class="brand-carousel-item swiper-slide">
+                                <img src="/images/client/04.jpg" alt="中青旅" />
+                                </div>
+                                <!-- swiper-slide end-->
+                                <!-- swiper-slide start -->
+                                <div class="brand-carousel-item swiper-slide">
+                                    <img src="/images/client/05.jpg" alt="中国扶贫基金会" />
+                                </div>
+                                <!-- swiper-slide end-->
+                                <!-- swiper-slide start -->
+                                <div class="brand-carousel-item swiper-slide">
+                                    <img src="/images/client/06.jpg" alt="中铁" />
+                                </div>
+                                <!-- swiper-slide end-->
+                                <!-- swiper-slide start -->
+                                <div class="brand-carousel-item swiper-slide">
+                                    <img src="/images/client/07.jpg" alt="中铁" />
+                                </div>
+                                <!-- swiper-slide end-->
+                                <!-- swiper-slide start -->
+                                <div class="brand-carousel-item swiper-slide">
+                                    <img src="/images/client/08.jpg" alt="中铁" />
+                                </div>
+                                <!-- swiper-slide end-->
+                                <!-- swiper-slide start -->
+                                <div class="brand-carousel-item swiper-slide">
+                                    <img src="/images/client/09.jpg" alt="中铁" />
+                                </div>
+                                <!-- swiper-slide end-->
+                                <!-- swiper-slide start -->
+                                <div class="brand-carousel-item swiper-slide">
+                                    <img src="/images/client/10.jpg" alt="中铁" />
+                                </div>
+                                <!-- swiper-slide end-->
+                            </div>
+                        </div>
+                        <!-- swiper navigation -->
+                        <div class="swiper-button-prev common-swiper-button-prev">
+                            <i class="las la-angle-left"></i>
+                        </div>
+                        <div class="swiper-button-next common-swiper-button-next">
+                            <i class="las la-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- brand carousel end -->
+
+
+    <!-- footer section start -->
+    {dede:include filename="public/footer.htm"/}
+    <!-- footer section end -->
+
+    <!-- Modal -->
+
+    <!-- Scripts -->
+    <!-- Global Vendor, plugins JS -->
+
+    <!-- Vendor JS -->
+    {dede:include filename="public/script.htm"/}
+</body>
+
+</html>

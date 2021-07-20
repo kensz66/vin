@@ -1,0 +1,127 @@
+.custom-container {
+  position: relative;
+  @include min-screen(768) {
+    display: grid;
+    grid-template-columns: 21.5% 78.5%;
+  }
+
+  @include max-screen(992, 1199) {
+    grid-template-columns: 25.5% 74.5%;
+  }
+  @include max-screen(768, 991) {
+    grid-template-columns: 35.5% 64.5%;
+  }
+  @include max-screen(767) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.custom-container2 {
+  position: relative;
+
+  @include min-screen(768) {
+    display: grid;
+    grid-template-columns: 25% 75%;
+  }
+
+  @include max-screen(992, 1199) {
+    grid-template-columns: 25% 75%;
+  }
+  @include max-screen(768, 991) {
+    grid-template-columns: 25% 75%;
+  }
+  @include max-screen(767) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.food-carousel-five-items,
+.food-carousel-six-items {
+  padding: 20px;
+  border: 1px solid #ebebeb;
+  .swiper-container {
+    padding: 30px 20px 90px 20px;
+    margin: -30px -20px -90px -20px;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+
+.food-carousel-four-items {
+  position: relative;
+  padding: 0px 20px;
+  .swiper-container {
+    padding: 30px 20px 90px 20px;
+    margin: -30px -20px -70px -20px;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+
+  .common-swiper-button-next,
+  .common-swiper-button-prev {
+    top: 55%;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &:hover {
+    .common-swiper-button-next,
+    .common-swiper-button-prev {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .common-swiper-button-prev {
+    @include min-screen(1500) {
+      left: -20px;
+    }
+    left: 20px;
+  }
+  .common-swiper-button-next {
+    left: auto;
+
+    @include min-screen(1500) {
+      right: -20px;
+    }
+    right: 20px;
+  }
+}
+.food-carousel-six-items {
+  position: relative;
+}
+.product-carousel-item {
+  margin-bottom: -20px;
+}
+
+.custom-col-left {
+  @include max-screen(767) {
+    margin-top: 30px;
+    order: 1;
+  }
+  .sidebar-widgets {
+    height: 100%;
+    .widget {
+      height: 100%;
+    }
+  }
+}
+.custom-col-left2 {
+  @include max-screen(767) {
+    margin-top: 30px;
+    order: 1;
+  }
+  .sidebar-widgets {
+    height: 100%;
+    .widget {
+      height: 100%;
+    }
+  }
+}
+
+.product-box2 {
+  height: 100%;
+  background: #f7f7f7;
+  padding: 30px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

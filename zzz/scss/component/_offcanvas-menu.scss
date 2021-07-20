@@ -1,0 +1,211 @@
+/*------------------------------------- 
+ # Offcanvas
+ -------------------------------------*/
+
+.offcanvas-modal.modal.fade .modal-dialog {
+  transform: translateX(-100%);
+}
+.offcanvas-modal.modal.show .modal-dialog {
+  transform: translateX(0%);
+}
+.offcanvas-dialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include min-screen(576) {
+    width: 400px;
+  }
+  width: 300px;
+  height: 100%;
+  margin: 0;
+
+  .modal-content {
+    height: 100%;
+    border-radius: 0;
+    border: 0;
+  }
+}
+
+// offcanvas-header
+.offcanvas-header {
+  border-bottom: 1px solid $borderColor;
+}
+
+.offcanvas-menu {
+  position: relative;
+  z-index: 1;
+  overflow-y: scroll;
+}
+.offcanvas-menu::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background-color: $white;
+}
+
+.offcanvas-menu ul ul {
+  display: none;
+}
+
+.offcanvas-menu > ul > li > ul li {
+  border-bottom: 0px;
+  & a {
+    padding-left: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    color: $body-color;
+  }
+}
+
+.offcanvas-menu li.active > ul {
+  display: block;
+}
+
+.offcanvas-menu li a {
+  display: block;
+  text-transform: capitalize;
+  color: $dark;
+  padding: 10px 0px;
+  position: relative;
+  font-size: 15px;
+  &:hover {
+    color: $success;
+  }
+}
+
+.offcanvas-menu a:not(:only-child):after {
+  content: "\f2c7";
+
+  font-family: "Ionicons";
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+.offcanvas-menu .active > a:not(:only-child):after {
+  content: "\f2f4";
+}
+
+/******************************** 
+# Offcanvas Menu Style End
+********************************/
+
+.offcanvas-social {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.offcanvas-social li {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  line-height: 40px;
+  padding: 0;
+}
+
+.offcanvas-social li a {
+  display: inline-block;
+   color: $white;
+  background: $dark;
+  font-size: 15px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 0px;
+  transition: none;
+  border-radius: 100%;
+}
+
+.offcanvas-social li a:hover {
+  background: $success;
+   color: $white;
+}
+
+.offcanvas-modal {
+  .modal-content {
+    @include min-screen(576) {
+      padding: 0px 30px;
+    }
+    padding: 0px 15px;
+  }
+  .offcanvas-form {
+    position: relative;
+    margin: 20px 0px;
+    .btn-search {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 55px;
+      height: 45px;
+      font-size: 24px;
+      line-height: 1;
+      padding: 0;
+      border: 0;
+      color: $white;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    .form-control {
+      padding: 10px 70px 10px 20px;
+      height: 46px;
+      font-size: 14px;
+      border: 1px solid $borderColor;
+      border-radius: 5px;
+    }
+  }
+}
+
+// blog-ctry-menu
+.blog-ctry-menu {
+  li {
+    a {
+      position: relative;
+      font-weight: normal;
+      color: $dark;
+      font-size: 14px;
+      text-transform: capitalize;
+      line-height: 36px;
+      display: block;
+      &:hover {
+        color: $success;
+      }
+      &::before {
+        content: "\f2c7";
+        position: absolute;
+        display: inline-block;
+        font-family: "Ionicons";
+        right: 0;
+      }
+    }
+    &.active {
+      a {
+        &::before {
+          content: "\f462";
+        }
+      }
+    }
+    // category-sub-menu
+    ul.category-sub-menu {
+      display: none;
+      li {
+        a {
+          font-size: 12px;
+          line-height: 30px;
+          margin: 0;
+          padding: 0 10px;
+          display: block;
+          color: $body-color;
+          &:hover {
+            color: $success;
+          }
+          &::before {
+            content: "";
+          }
+        }
+      }
+    }
+  }
+}

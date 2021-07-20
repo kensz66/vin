@@ -1,0 +1,75 @@
+.news-letter-sectoin {
+  padding: 35px 0;
+}
+
+.news-letter-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  @include max-screen(767) {
+    flex-direction: column;
+  }
+}
+.news-letter-title {
+  @include min-screen(768) {
+    margin-right: 40px;
+  }
+  @include max-screen(767) {
+    text-align: center;
+  }
+  .title {
+    font-size: 22px;
+    color: $white;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+  p {
+    color: $white;
+  }
+}
+
+.news-letter-form {
+  position: relative;
+  @include min-screen(1200) {
+    margin-right: 50px;
+  }
+
+  @include max-screen(767) {
+    margin-top: 30px;
+  }
+  flex: 1;
+  .form-control {
+    height: 47px;
+    background: $white;
+    border: 0;
+    color: #b1b1b1;
+    padding: 10px 120px 10px 10px;
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+  }
+}
+.sign-up-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 14px;
+  color: $white;
+  border: 0;
+  box-shadow: none;
+  padding: 0 20px;
+  line-height: 47px;
+  height: 47px;
+  border-radius: 0 5px 5px 0;
+  background: #1a2225;
+  transition: all 0.3s linear;
+  &:hover {
+    box-shadow: 0 0 20px $white;
+  }
+}
+
+.store-btn {
+}

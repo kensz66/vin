@@ -1,0 +1,72 @@
+@import "./main-menu";
+@import "./contact-info";
+
+.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  animation: fadeInDown 0.5s ease-in-out;
+  background: rgba($gray-100, .95) !important;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s linear;
+//   &:hover {
+//     background: $dark !important;
+//   }
+}
+
+.is-sticky-mobile {
+  @include max-screen(991) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 15;
+    padding: 15px 0px;
+    animation: fadeInDown 0.5s ease-in-out;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.header-botom-two {
+  background: #4dba52;
+  &.is-sticky {
+    background: rgba(77, 186, 82, 0.8) !important;
+    &:hover {
+      background: #4dba52 !important;
+    }
+  }
+}
+
+.header-botom-three {
+  &.bg-white {
+    .menu-bars {
+      align-items: center;
+      width: 270px;
+      height: 59px;
+      background: $success;
+      border-color: $success;
+      padding: 12px 20px;
+      line-height: 1;
+      font-size: 14px;
+      text-transform: uppercase;
+      border-radius: 5px 5px 0 0;
+      color: $white;
+      margin-right: 30px;
+      i {
+        font-size: 24px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.header-botom-three {
+  &.is-sticky {
+    background: rgba(255, 255, 255, 0.8) !important;
+    &:hover {
+      background: $white !important;
+    }
+  }
+}

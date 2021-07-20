@@ -1,0 +1,99 @@
+本地代码库初始化
+git init
+
+添加文件到版本库
+git add 文件名
+git add .  //添加文件夹所有文件
+
+提交文件到本地库
+git commit -m '版本说明的内容(必填)'
+
+关联到远程库
+git remote add origin https://www.github.com/kensz66/JQueryLearning.git
+
+获取远程库与本地库合并
+git pull --rebase origin master
+
+本地库内容推送到远程库
+git push -u origin master
+
+状态查询
+git status
+
+============分支操作====================
+
+新建本地分支
+git branch 分支名
+
+切换到本地分支 (切换分支前请清理或提交当前的更改)
+git checkout 分支名
+
+删除本地分支
+git branch -d 分支名
+
+删除远程分支
+git push origin --de 分支名
+
+查看所有分支情况
+git branch -a
+
+合并分支
+git merge 分支名    //将分支名合并到当前分支
+
+=======储藏文件列表====================
+
+把当前的工作储藏起来 等以后恢复现场后继续工作 stash为英文储藏的意思
+git stash
+
+查看所有储藏的文件列表
+git stash list
+
+恢复被储藏的文件,但是不删除内容
+git stash apply
+
+删除储藏的文件
+git stash drop
+
+恢复储藏的文件,同时删除储藏的文件
+git stash pop
+
+========恢复文件到某一版本==========
+
+方法一:
+查看版本信息
+git log
+
+选择某版本号恢复到某版本
+git reset --hard 版本号 7e732114f4fdeb1c418367bf1d2799137a08698b(前8位即可)
+
+因为此时如果用“git push”会报错，因为我们本地库HEAD指向的版本比远程库的要旧：所以我们要用“git push -f”强制推上去，就可以了
+git push -f
+
+方法二:
+查看版本信息 git log
+选择某一版本号回复到某版本 git revert -n 版本号
+本方法采用直接修改文件的方式回复,可以对比选择需要修改的地方,相对比较人性化.
+
+
+-------------------------------
+ git配置config记住密码
+
+设置记住密码（默认15分钟）：
+
+git config --global credential.helper cache
+如果想自己设置时间，可以这样做：
+
+git config credential.helper 'cache --timeout=3600'
+这样就设置一个小时之后失效
+
+长期存储密码：
+
+git config --global credential.helper store
+增加远程地址的时候带上密码也是可以的。(推荐)
+
+从仓库的config的里面修改url，后面加上密码
+
+http://use_name:password@git.oschina.net/name/project.git
+补充：使用客户端也可以存储密码的。
+
+
