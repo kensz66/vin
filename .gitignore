@@ -5,5 +5,5 @@ data/sessions_**
 /data/tplcache/
 /data/cache/**
 /a/**
-/view/
+/view/**
 
