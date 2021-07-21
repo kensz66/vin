@@ -1,56 +1,88 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>">
-<title><?php echo $cfg_softname." ".$cfg_version; ?></title>
-<link href="css/base.css" rel="stylesheet" type="text/css" />
-<link href="css/login.css" rel="stylesheet" type="text/css" />
-<script src="../include/js/jquery/jquery.js" language="javascript" type="text/javascript"></script>
-<script type="text/javascript">
-$ = jQuery;
-function changeAuthCode() {
-	var num = 	new Date().getTime();
-	var rand = Math.round(Math.random() * 10000);
-	num = num + rand;
-	$('#ver_code').css('visibility','visible');
-	if ($("#vdimgck")[0]) {
-		$("#vdimgck")[0].src = "../include/vdimgck.php?tag=" + num;
-	}
-	return false;	
-}
-</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>">
+	<title>
+		<?php echo $cfg_webname.'登录'; ?>
+	</title>
+	<!-- <link href="css/base.css" rel="stylesheet" type="text/css" /> -->
+	<!-- <link href="css/login.css" rel="stylesheet" type="text/css" /> -->
+	<link rel="stylesheet" href="/templets/default/assets/css/style.css">
+	<script src="../include/js/jquery/jquery.js" language="javascript" type="text/javascript"></script>
+	<script type="text/javascript">
+		$ = jQuery;
+		function changeAuthCode() {
+			var num = new Date().getTime();
+			var rand = Math.round(Math.random() * 10000);
+			num = num + rand;
+			$('#ver_code').css('visibility', 'visible');
+			if ($("#vdimgck")[0]) {
+				$("#vdimgck")[0].src = "../include/vdimgck.php?tag=" + num;
+			}
+			return false;
+		}
+	</script>
 </head>
+
 <body>
-<div id="login-box">
-   <div class="login-top"><a href="../index.php" target="_blank" title="返回网站主页">返回网站主页</a></div>
-   <?php echo $redmsg; ?>
-   <div class="login-main">
-    <form name="form1" method="post" action="login.php">
-      <input type="hidden" name="gotopage" value="<?php if(!empty($gotopage)) echo RemoveXSS($gotopage);?>" />
-      <input type="hidden" name="dopost" value="login" />
-      <input name='adminstyle' type='hidden' value='newdedecms' />
-      <dl>
-	   <dt>用户名：</dt>
-	   <dd><input type="text" name="userid"/></dd>
-	   <dt>密&nbsp;&nbsp;码：</dt>
-	   <dd><input type="password" class="alltxt" name="pwd"/></dd>
-	   <?php
-        	if(preg_match("/6/",$safe_gdopen))
-        	{
-        ?>
-	   <dt>验证码：</dt>
-	   <dd><input id="vdcode" type="text" name="validate" style="text-transform:uppercase;"/><img id="vdimgck" align="absmiddle" onClick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="../include/vdimgck.php"/>
-           <a href="#" onClick="changeAuthCode();">看不清？ </a></dd>
-		<?php
-       		}
-		?>
-		<dt>&nbsp;</dt>
-		<dd><button type="submit" name="sm1" class="login-btn" onclick="this.form.submit();">登录</button></dd>
-	 </dl>
-	</form>
-   </div>
-   <div class="login-power">Powered by<a href="http://www.dedecms.com" title="DedeCMS官网"><strong>DedeCMS<?php echo $cfg_version; ?></strong></a>&copy; 2004-2011 <a href="http://www.desdev.cn" target="_blank">DesDev</a> Inc.</div>
-</div>
-<div class="dede-iframe"><iframe name="loginad" src="login.php?dopost=showad" frameborder="0" id="loginad" scrolling="no" marginwidth="0" marginheight="0" width="100%"></iframe></div>
+	<div class="login-register-area section-mt">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 col-md-12 mx-auto">
+					<div class="login-register-wrapper">
+						<div class="login-register-tab-list nav nav-tabs" id="nav-tab" role="tablist">
+							<a class="active" data-bs-toggle="tab" href="#lg1">
+								<h4>登录</h4>
+							</a>
+							<a data-bs-toggle="tab" href="#lg2">
+								<h4>江西麟飞服饰有限公司</h4>
+							</a>
+						</div>
+						<div class="tab-content">
+							<div id="lg1" class="tab-pane show active">
+								<div class="login-form-container">
+									<div class="login-register-form">
+										<?php echo $redmsg; ?>
+										<form name="form1" action="login.php" method="post">
+											<input type="hidden" name="gotopage"
+												value="<?php if(!empty($gotopage)) echo RemoveXSS($gotopage);?>">
+											<input type="hidden" name="dopost" value="login" />
+											<input name='adminstyle' type='hidden' value='newdedecms' />
+
+											<input type="text" name="userid" placeholder="用户名">
+											<input type="password" name="pwd" placeholder="密码">
+
+											<?php
+												if(preg_match("/6/",$safe_gdopen)){
+											?>
+											<div class="row align-items-baseline">
+
+												<div class="col-7">
+													<input id="vdcode" type="text" name="validate" style="text-transform:uppercase;" placeholder="验证码" />
+												</div>
+												<div class="col-5">
+													<img id="vdimgck" align="absmiddle" style="cursor: pointer;" alt="看不清？点击更换" onClick="this.src=this.src+'?'"  src="../include/vdimgck.php" />
+													<a href="#" onClick="changeAuthCode();">看不清？</a>
+												</div>
+											</div>
+											<?php	}?>
+											<div class="button-box">
+												<button type="submit" name="sm1" class="btn btn-primary"
+													onclick="this.form.submit();"><span>登录</span></button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </body>
+
 </html>

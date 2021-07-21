@@ -12,12 +12,12 @@ require_once (dirname(__FILE__).'/common.inc.php');
 require_once (DEDEDATA.'/safe/inc_safe_config.php');
 require_once (DEDEDATA.'/config.cache.inc.php');
 $config = array(
-    'font_size'   => 14,
+    'font_size'   => 25,
     'img_height'  => $safe_wheight,
     'word_type'  => (int)$safe_codetype,   // 1:数字  2:英文   3:单词
     'img_width'   => $safe_wwidth,
     'use_boder'   => TRUE,
-    'font_file'   => dirname(__FILE__).'/data/fonts/'.mt_rand(1,3).'.ttf',
+    'font_file'   => dirname(__FILE__).'/data/fonts/'.mt_rand(1,9).'.ttf',
     'wordlist_file'   => dirname(__FILE__).'/data/words/words.txt',
     'filter_type' => 5);
 
@@ -53,10 +53,10 @@ function echo_validate_image( $config = array() )
     }
 
     //主要参数
-    $font_size   = isset($config['font_size']) ? $config['font_size'] : 14;
-    $img_height  = isset($config['img_height']) ? $config['img_height'] : 24;
-    $img_width   = isset($config['img_width']) ? $config['img_width'] : 68;
-    $font_file   = isset($config['font_file']) ? $config['font_file'] : PATH_DATA.'/data/font/'.mt_rand(1,3).'.ttf';
+    $font_size   = isset($config['font_size']) ? $config['font_size'] : 25;
+    $img_height  = isset($config['img_height']) ? $config['img_height'] : 40;
+    $img_width   = isset($config['img_width']) ? $config['img_width'] : 100;
+    $font_file   = isset($config['font_file']) ? $config['font_file'] : PATH_DATA.'/data/font/'.mt_rand(1,9).'.ttf';
     $use_boder   = isset($config['use_boder']) ? $config['use_boder'] : TRUE;
     $filter_type = isset($config['filter_type']) ? $config['filter_type'] : 0;
 
@@ -65,12 +65,17 @@ function echo_validate_image( $config = array() )
     imagecolorallocate($im, 255,255,255);
 
     //文字随机颜色
-    $fontColor[]  = imagecolorallocate($im, 0x15, 0x15, 0x15);
-    $fontColor[]  = imagecolorallocate($im, 0x95, 0x1e, 0x04);
-    $fontColor[]  = imagecolorallocate($im, 0x93, 0x14, 0xa9);
-    $fontColor[]  = imagecolorallocate($im, 0x12, 0x81, 0x0a);
-    $fontColor[]  = imagecolorallocate($im, 0x06, 0x3a, 0xd5);
-
+    $fontColor[]  = imagecolorallocate($im, 0x66, 0x10, 0xf2);
+    $fontColor[]  = imagecolorallocate($im, 0x66, 0x10, 0xf2);
+    $fontColor[]  = imagecolorallocate($im, 0x66, 0x10, 0xf2);
+    $fontColor[]  = imagecolorallocate($im, 0x66, 0x10, 0xf2);
+    $fontColor[]  = imagecolorallocate($im, 0x66, 0x10, 0xf2);
+    
+    // $fontColor[]  = imagecolorallocate($im, 0x15, 0x15, 0x15);
+    // $fontColor[]  = imagecolorallocate($im, 0x95, 0x1e, 0x04);
+    // $fontColor[]  = imagecolorallocate($im, 0x93, 0x14, 0xa9);
+    // $fontColor[]  = imagecolorallocate($im, 0x12, 0x81, 0x0a);
+    // $fontColor[]  = imagecolorallocate($im, 0x06, 0x3a, 0xd5);
     //获取随机字符
     $rndstring  = '';
     if ($config['word_type'] != 3)
@@ -103,14 +108,14 @@ function echo_validate_image( $config = array() )
     $rndcodelen = strlen($rndstring);
 
     //背景横线
-    $lineColor1 = imagecolorallocate($im, 0xda, 0xd9, 0xd1);
+    $lineColor1 = imagecolorallocate($im, 0x0d, 0x0c, 0x22);
     for($j=3; $j<=$img_height-3; $j=$j+3)
     {
         imageline($im, 2, $j, $img_width - 2, $j, $lineColor1);
     }
 
     //背景竖线
-    $lineColor2 = imagecolorallocate($im, 0xda,0xd9,0xd1);
+    $lineColor2 = imagecolorallocate($im, 0x3d,0x3d,0x4e);
     for($j=2;$j<100;$j=$j+6)
     {
         imageline($im, $j, 0, $j+8, $img_height, $lineColor2);
@@ -130,9 +135,10 @@ function echo_validate_image( $config = array() )
         $bc = mt_rand(0, 1);
         $rndstring[$i] = strtoupper($rndstring[$i]);
         $c_fontColor = $fontColor[mt_rand(0,4)];
-        $y_pos = $i==0 ? 4 : $i*($font_size+2);
+        $y_pos = $i==0 ? 4 : $i*($font_size+0);
         $c = mt_rand(0, 15);
-        @imagettftext($im, $font_size, $c, $y_pos, 19, $c_fontColor, $font_file, $rndstring[$i]);
+        $font_file = dirname(__FILE__) . '/data/fonts/' . mt_rand(1, 9) . '.ttf';
+        @imagettftext($im, $font_size, $c, $y_pos, 30, $c_fontColor, $font_file, $rndstring[$i]);
         $lastc = $rndstring[$i];
     }
 
