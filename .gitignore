@@ -6,4 +6,5 @@ data/sessions_**
 /data/cache/**
 /a/**
 /view/**
+/view/
 
