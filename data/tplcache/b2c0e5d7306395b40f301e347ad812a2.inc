@@ -1,1 +1,0 @@
-<a class="" href="javascript:void(0)">[field:typename /]</a>

@@ -1,1 +1,0 @@
-<li class="sm_header"><a href="[field:typeurl/]">[field:typename /]</a></li>
