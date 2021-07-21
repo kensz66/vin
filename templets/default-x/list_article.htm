@@ -57,33 +57,6 @@
      <ul class="d4">
       {dede:arclist flag='c' titlelen=42 row=6}
       <li><a href="[field:arcurl/]">[field:title/]</a>
-       <p>[field:description function='cn_substr(@me,80)'/]...</p>
-      </li>
-      {/dede:arclist}
-     </ul>
-    </dd>
-   </dl>
-  </div>
-  <!-- /commend -->
-  <div class="hot mt1 light">
-   <dl class="tbox">
-    <dt class='light'><strong>热点内容</strong></dt>
-    <dd class='light'>
-     <ul class="c1 ico2">
-      {dede:arclist row=10 orderby=click}
-      <li><a href="[field:arcurl/]">[field:title/]</a></li>
-      {/dede:arclist}
-     </ul>
-    </dd>
-   </dl>
-  </div>
-  {dede:qrcode/}
-
- </div>
- <!-- /pright -->
-</div>
-
-{dede:include filename="footer.htm"/}
-<!-- /footer -->
+       <p>[field:description function='cn_substr(@me,80)'/]...</p>w<!-- /footer -->
 </body>
 </html>

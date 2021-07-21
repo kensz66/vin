@@ -1003,17 +1003,17 @@ class ListView
         if ($this->PageNo != 1) {
 
             $prepage .= "<li class=\"page-item\"><a class=\"page-link\" href='" . str_replace("{page}", $prepagenum, $tnamerule) . "'><span class=\"ion-ios-arrow-left\"></span></a></li>\r\n";
-            $indexpage = "<li class=\"page-item\"><a class=\"page-link\" href='" . str_replace("{page}", 1, $tnamerule) . "'><span>首页</span></a></li>\r\n";
+            $indexpage = "<li class=\"page-item\"><a class=\"page-link border-0\" href='" . str_replace("{page}", 1, $tnamerule) . "'>首页</a></li>\r\n";
         } else {
-            $indexpage = "<li class=\"page-item\"><button class=\"page-link page-link-hover-disable\"><span class=\"ion-ios-arrow-left\"></span></button></li>\r\n";    //只有首页一页
+            $indexpage = "<li class=\"page-item\"><button class=\"page-link btn disabled\"><span class=\"ion-ios-arrow-left\"></span></button></li>\r\n";    //只有首页一页
         }
 
         //下一页,未页的链接
         if ($this->PageNo != $totalpage && $totalpage > 1) {
             $nextpage .= "<li class=\"page-item\"><a class=\"page-link\" href='" . str_replace("{page}", $nextpagenum, $tnamerule) . "'><span class=\"ion-ios-arrow-right\"></span></a></li>\r\n";
-            $endpage = "<li class=\"page-item\"><a class=\"page-link\" href='" . str_replace("{page}", $totalpage, $tnamerule) . "'><span>末页</span></a></li>\r\n";
+            $endpage = "<li class=\"page-item\"><a class=\"page-link border-0\" href='" . str_replace("{page}", $totalpage, $tnamerule) . "'>末页</a></li>\r\n";
         } else {
-            $endpage = "<li class=\"page-item\"><button class=\"page-link page-link-hover-disable\"><span class=\"ion-ios-arrow-right\"></span></button></li>\r\n";
+            $endpage = "<li class=\"page-item\"><button class=\"page-link btn disabled\"><span class=\"ion-ios-arrow-right\"></span></button></li>\r\n";
         }
 
         //option链接
@@ -1050,9 +1050,9 @@ class ListView
         }
         for ($j; $j <= $total_list; $j++) {
             if ($j == $this->PageNo) {
-                $listdd .= "<li class=\"page-item active\"><button class=\"page-link page-link-hover-disable\"><span>$j</span></button></li>\r\n";
+                $listdd .= "<li class=\"page-item active\"><button class=\"page-link btn disabled\"><span>$j</span></button></li>\r\n";
             } else {
-                $listdd .= "<li class=\"page-item\"><a class=\"page-link\" href='" . str_replace("{page}", $j, $tnamerule) . "'>" . "<span>" . $j . "</span>" . "</a></li>\r\n";
+                $listdd .= "<li class=\"page-item\"><a class=\"page-link\" href='" . str_replace("{page}", $j, $tnamerule) . "'>" .  $j . "</a></li>\r\n";
             }
         }
         $plist = '';
@@ -1111,15 +1111,15 @@ class ListView
         //获得上一页和下一页的链接
         if ($this->PageNo != 1) {
             $prepage .= "<li class=\"page-item\"><a class=\"page-link\" href='" . $purl . "PageNo=$prepagenum'><span class=\"ion-ios-arrow-left\"></span></a></li>\r\n";
-            $indexpage = "<li class=\"page-item\"><a href='" . $purl . "PageNo=1'><span class=\"page-link\">首页</span></a></li>\r\n";  //首页
+            $indexpage = "<li class=\"page-item\"><a class=\"page-link border-0\"  href='" . $purl . "PageNo=1'>首页</a></li>\r\n";  //首页
         } else {
-            $indexpage = "<li class=\"page-item\"><button class=\"page-link page-link-hover-disable\"><span class=\"ion-ios-arrow-left\"></span></button></li>\r\n";  //首页没有了
+            $indexpage = "<li class=\"page-item\"><button class=\"page-link btn disabled\"><span class=\"ion-ios-arrow-left\"></span></button></li>\r\n";  //首页没有了
         }
         if ($this->PageNo != $totalpage && $totalpage > 1) {
             $nextpage .= "<li class=\"page-item\"><a class=\"page-link\" href='" . $purl . "PageNo=$nextpagenum'><span class=\"ion-ios-arrow-right\"></span></a></li>\r\n";
-            $endpage = "<li class=\"page-item\"><a class=\"page-link\" href='" . $purl . "PageNo=$totalpage'><span>末页</span></a></li>\r\n";   //末页
+            $endpage = "<li class=\"page-item\"><a class=\"page-link border-0\" href='" . $purl . "PageNo=$totalpage'>末页</a></li>\r\n";   //末页
         } else {
-            $endpage = "<li class=\"page-item\"><button class=\"page-link page-link-hover-disable\"><span class=\"ion-ios-arrow-right\"></span></button></li>\r\n";   //末页没有了
+            $endpage = "<li class=\"page-item\"><button class=\"page-link btn disabled\"><span class=\"ion-ios-arrow-right\"></span></button></li>\r\n";   //末页没有了
         }
 
 
@@ -1140,9 +1140,9 @@ class ListView
         }
         for ($j; $j <= $total_list; $j++) {
             if ($j == $this->PageNo) {
-                $listdd .= "<li class=\"page-item active\"><button class=\"page-link page-link-hover-disable\"><span>$j</span></button></li>\r\n";
+                $listdd .= "<li class=\"page-item active\"><button class=\"page-link btn disabled\">$j</button></li>\r\n";
             } else {
-                $listdd .= "<li class=\"page-item\"><a class=\"page-link\" href='" . $purl . "PageNo=$j'>" . "<span>" . $j . "</span>" . "</a></li>\r\n";
+                $listdd .= "<li class=\"page-item\"><a class=\"page-link\" href='" . $purl . "PageNo=$j'>" . $j . "</a></li>\r\n";
             }
         }
 

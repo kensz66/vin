@@ -117,35 +117,39 @@ else if($dopost=='editshow')
     fclose($fp);
 ?>
 <form name='editform' action='index_body.php' method='post'>
-<input type='hidden' name='dopost' value='editsave' />
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-   <tr>
-     <td height='28' background="images/tbg.gif">
-         <div style='float:left'><b>修改快捷操作项</b></div>
-      <div style='float:right;padding:3px 10px 0 0;'>
-             <a href="javascript:CloseTab('editTab')"><img src="images/close.gif" width="12" height="12" border="0" /></a>
-      </div>
-     </td>
-   </tr>
-      <tr><td style="height:6px;font-size:1px;border-top:1px solid #8DA659">&nbsp;</td></tr>
-   <tr>
-     <td>
-         按原格式修改/增加XML项。
-     </td>
-   </tr>
-   <tr>
-     <td align='center'>
-         <textarea name="quickmenu" rows="10" cols="50" style="width:94%;height:220px"><?php echo $oldct; ?></textarea>
-     </td>
-   </tr>
-   <tr>
-     <td height="45" align="center">
-         <input type="submit" name="Submit" value="保存项目" class="np coolbg" style="width:80px;cursor:pointer" />
-         &nbsp;
-         <input type="reset" name="reset" value="重设" class="np coolbg" style="width:50px;cursor:pointer" />
-     </td>
-   </tr>
-  </table>
+    <input type='hidden' name='dopost' value='editsave' />
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td height='28' background="images/tbg.gif">
+                <div style='float:left'><b>修改快捷操作项</b></div>
+                <div style='float:right;padding:3px 10px 0 0;'>
+                    <a href="javascript:CloseTab('editTab')"><img src="images/close.gif" width="12" height="12"
+                            border="0" /></a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:6px;font-size:1px;border-top:1px solid #8DA659">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                按原格式修改/增加XML项。
+            </td>
+        </tr>
+        <tr>
+            <td align='center'>
+                <textarea name="quickmenu" rows="10" cols="50"
+                    style="width:94%;height:220px"><?php echo $oldct; ?></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td height="45" align="center">
+                <input type="submit" name="Submit" value="保存项目" class="np coolbg" style="width:80px;cursor:pointer" />
+                &nbsp;
+                <input type="reset" name="reset" value="重设" class="np coolbg" style="width:50px;cursor:pointer" />
+            </td>
+        </tr>
+    </table>
 </form>
 <?php
 exit();
@@ -180,31 +184,41 @@ else if($dopost=='getRightSide')
         $chArr[] = $row;
     }
 ?>
-    <table width="100%" class="dboxtable">
+<table width="100%" class="dboxtable">
     <tr>
-        <td width='50%' class='nline'  style="text-align:left"> 会员数： </td>
-        <td class='nline' style="text-align:left"> <?php echo $row1['dd']; ?> </td>
+        <td width='50%' class='nline' style="text-align:left"> 会员数： </td>
+        <td class='nline' style="text-align:left">
+            <?php echo $row1['dd']; ?>
+        </td>
     </tr>
     <tr>
         <td class='nline' style="text-align:left"> 文档数： </td>
-        <td class='nline' style="text-align:left"> <?php echo $allArc; ?> </td>
+        <td class='nline' style="text-align:left">
+            <?php echo $allArc; ?>
+        </td>
     </tr>
     <?php
     foreach($chArr as $row)
     {
     ?>
     <tr>
-        <td class='nline' style="text-align:left"> <?php echo $row['typename']; ?>： </td>
-        <td class='nline' style="text-align:left"> <?php echo $row['dd']; ?>&nbsp; </td>
+        <td class='nline' style="text-align:left">
+            <?php echo $row['typename']; ?>：
+        </td>
+        <td class='nline' style="text-align:left">
+            <?php echo $row['dd']; ?>&nbsp;
+        </td>
     </tr>
     <?php
     }
     ?>
     <tr>
         <td style="text-align:left"> 评论数： </td>
-        <td style="text-align:left"> <?php echo $row2['dd']; ?> </td>
+        <td style="text-align:left">
+            <?php echo $row2['dd']; ?>
+        </td>
     </tr>
-    </table>
+</table>
 <?php
 exit();
 } else if ($dopost=='getRightSideNews')
@@ -220,7 +234,7 @@ exit();
     }
     AjaxHead();
 ?>
-    <table width="100%" class="dboxtable">
+<table width="100%" class="dboxtable">
     <?php
     foreach($arcArr as $row)
     {
@@ -238,17 +252,17 @@ exit();
     <?php
     }
     ?>
-    </table>
+</table>
 <?php
 exit;
 } else if ($dopost=='showauth')
 {
-    include('templets/index_body_showauth.htm');
-    exit;
+    // include('templets/index_body_showauth.htm');
+    // exit;
 } else if ($dopost=='showad')
 {
-    include('templets/index_body_showad.htm');
-    exit;
+    // include('templets/index_body_showad.htm');
+    // exit;
 } else if($dopost=='setskin')
 {
 	$cskin = empty($cskin)? 1 : $cskin;
@@ -433,32 +447,33 @@ exit;
 ?>
 <table width="100%" class="dboxtable">
     <tbody>
-<?php
+        <?php
     foreach( $seo_info as $key => $value )
     {
         if ( $key=='id' OR $key=='create_time' ) continue;
 ?>
 
-    <tr>
-        <td width="50%" class="nline" style="text-align:left"> <?php
+        <tr>
+            <td width="50%" class="nline" style="text-align:left">
+                <?php
             echo $inff[$key];
         ?>
-        ： </td>
-        <td class="nline" style="text-align:left"> <?php
+                ：
+            </td>
+            <td class="nline" style="text-align:left">
+                <?php
             echo $value;
         ?>
-         </td>
-    </tr>
-<?php
+            </td>
+        </tr>
+        <?php
 }
 ?>
 
-    </tbody></table>
+    </tbody>
+</table>
 <?php
     
 	exit;
 }
 ?>
-       
-    
-

@@ -27,70 +27,59 @@
   <!-- bread crumb section end -->
 
   <!-- shop product tab start-->
-  <div class="shop-product-tab section-mb">
+  <section class="blog-section">
     <div class="container">
-
-      <div class="row">
-        <div class="col-lg-9">
-
-
-
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel">
-              <div class="row grid-view mb-n7">
+      <div class="row mb-n7">
+        <div class="col-lg-8 col-xl-9 mb-7">
+          <div class="row mb-n7 row-cols-1">
 
 
-                {dede:list pagesize='12'}
-                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-7">
-                  <!-- product-card start -->
-                  <div class="product-card">
-                    <!-- <span class="badge bg-success product-badge">new</span> -->
-                    <div class="product-thumb-nail">
-                      [field:array runphp='yes']
-                      @me = (empty(@me['litpic']) ? "" : "<a href='{@me[' arcurl']}'><img
-                          class='product-image rounded-top rounded-5' src='{@me[' litpic']}' alt='{@me['
-                          title']}' /></a>");
-                      [/field:array]
-                      <ul class="actions">
-                        <li class="action quick-view">
-                          <button data-bs-toggle="modal" data-bs-target="#product-modal"><i
-                              class="las la-eye"></i></button>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="product-content">
-                      <h3 class="product-title fw-normal text-center text-truncate"><a
-                          href="[field:arcurl/]">[field:title/]</a>
-                      </h3>
-                    </div>
-                  </div>
-                  <!-- product-card end -->
+            <!-- single blog start -->
+            {dede:list pagesize='12'}
+            <div class="col mb-7">
+              <div class="blog-card blog-card-list2">
+                <div class="thumb bg-light p-0 text-center">
+                  [field:array runphp='yes']
+                  @me = (empty(@me['litpic']) ? "<a href='{@me[' arcurl']}'><img class='product-image rounded-top rounded-5' src='' /></a>" : "<a href='{@me[' arcurl']}'><img class='product-image rounded-top rounded-5' src='{@me[' litpic']}' alt='{@me[' title']}' /></a>");
+                  [/field:array]
                 </div>
-                {/dede:list}
-
-                <!-- 分页列表 start -->
-                <div class="col-12 mt-7 mb-7">
-                  <nav aria-label="Page navigation">
-                    <ul class="pagination justify-content-center">
-                      {dede:pagelist listitem="index,end,pre,next,pageno" listsize="5"/}
-                    </ul>
-                  </nav>
+                <div class="blog-content">
+                  <h3 class="title">
+                    <a href="[field:arcurl/]">[field:title/]</a>
+                  </h3>
+                  <p class="blog_link_meta">
+                    Posted by <a href="#" class="text-success blog-list-link">HasTech</a> /
+                    27 sep, 2021
+                  </p>
+                  <p>[field:description function='cn_substr(@me,80)'/]...</p>
+                  <a class="blog-list-link" href="blog-details-left-sidebar.html">Read More</a>
                 </div>
-                <!-- 分页列表 end -->
-
               </div>
             </div>
+            {/dede:list}
 
+            <!-- single blog end -->
+
+            <div class="section-pt section-mb">
+              <!-- pagination start -->
+              <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                  {dede:pagelist listitem="index,end,pre,next,pageno" listsize="5"/}
+                </ul>
+              </nav>
+              <!-- pagination start -->
+            </div>
           </div>
-
         </div>
+
         {dede:include filename="sidebar/article-sidebar.htm"/}
 
 
       </div>
-
     </div>
-  </div>
+  </section>
+
+
   <!-- shop product tab end-->
 
   <!-- main content end -->

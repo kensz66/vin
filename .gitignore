@@ -1,10 +1,8 @@
 **/node_modules/**
 node_modules
-data/sessions_7fd73785e8/sess_5dfdlu9inp6pqd8e8m7rr2ohlu
-data/sessions_7fd73785e8/sess_7tvfg23n99fkqcaiuudttplce6
-data/sessions_7fd73785e8/sess_8oie3ki0pf3qcg2p0qvld5flf8
-data/sessions_7fd73785e8/sess_atdn80sdind0uedartpia7pel7
-data/sessions_7fd73785e8/sess_b2qrakjv8os5c764flugpko4jg
-data/sessions_7fd73785e8/sess_b9k5or75ajgm0joul5fbh80drn
-data/sessions_7fd73785e8/sess_hddrd0287fvaicgf8rctct5slh
-data/sessions_7fd73785e8/sess_usqilmkvf3inqvci40qop3n5qb
+data/sessions_**
+**/data/tplcache/**
+/data/tplcache/
+/data/cache/**
+/a/**
+
