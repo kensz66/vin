@@ -279,9 +279,9 @@ function ShowMsg($msg, $gourl, $onlymsg=0, $limittime=0)
 {
     if(empty($GLOBALS['cfg_plus_dir'])) $GLOBALS['cfg_plus_dir'] = '..';
 
-    $htmlhead  = "<html>\r\n<head>\r\n<title>DedeCMS提示信息</title>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=gb2312\" />\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\r\n<meta name=\"renderer\" content=\"webkit\">\r\n<meta http-equiv=\"Cache-Control\" content=\"no-siteapp\" />";
-    $htmlhead .= "<base target='_self'/>\r\n<style>div{line-height:160%;}</style></head>\r\n<body leftmargin='0' topmargin='0' bgcolor='#FFFFFF'>".(isset($GLOBALS['ucsynlogin']) ? $GLOBALS['ucsynlogin'] : '')."\r\n<center>\r\n<script>\r\n";
-    $htmlfoot  = "</script>\r\n</center>\r\n</body>\r\n</html>\r\n";
+    $htmlhead  = "<html><head><title>提示信息</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\"><meta name=\"renderer\" content=\"webkit\"><meta http-equiv=\"Cache-Control\" content=\"no-siteapp\" /><base target='_self'/><style>div{line-height:160%;}</style></head>";
+    $htmlhead .= "<body leftmargin='0' topmargin='0' bgcolor='#FFFFFF'>".(isset($GLOBALS['ucsynlogin']) ? $GLOBALS['ucsynlogin'] : '')."<center><script>";
+    $htmlfoot  = "</script></center></body></html>";
 
     $litime = ($limittime==0 ? 1000 : $limittime);
     $func = '';
@@ -312,7 +312,7 @@ function ShowMsg($msg, $gourl, $onlymsg=0, $limittime=0)
       }\r\n";
         $rmsg = $func;
         $rmsg .= "document.write(\"<br /><div style='width:450px;padding:0px;border:1px solid #DADADA;'>";
-        $rmsg .= "<div style='padding:6px;font-size:12px;border-bottom:1px solid #DADADA;background:#DBEEBD url({$GLOBALS['cfg_plus_dir']}/img/wbg.gif)';'><b>DedeCMS 提示信息！</b></div>\");\r\n";
+        $rmsg .= "<div style='padding:6px;font-size:12px;border-bottom:1px solid #DADADA;background:#DBEEBD url({$GLOBALS['cfg_plus_dir']}/img/wbg.gif)';'><b>提示信息！</b></div>\");\r\n";
         $rmsg .= "document.write(\"<div style='height:130px;font-size:10pt;background:#ffffff'><br />\");\r\n";
         $rmsg .= "document.write(\"".str_replace("\"","“",$msg)."\");\r\n";
         $rmsg .= "document.write(\"";
@@ -321,7 +321,7 @@ function ShowMsg($msg, $gourl, $onlymsg=0, $limittime=0)
         {
             if( $gourl != 'javascript:;' && $gourl != '')
             {
-                $rmsg .= "<br /><a href='{$gourl}'>如果你的浏览器没反应，请点击这里...</a>";
+                $rmsg .= "<br /><a href='{$gourl}'>如果浏览器没反应，请点击这里...</a>";
                 $rmsg .= "<br/></div>\");\r\n";
                 $rmsg .= "setTimeout('JumpUrl()',$litime);";
             }

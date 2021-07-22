@@ -30,29 +30,30 @@
   <section class="blog-section">
     <div class="container">
       <div class="row mb-n7">
+
+
         <div class="col-lg-8 col-xl-9 mb-7">
           <div class="row mb-n7 row-cols-1">
 
 
             <!-- single blog start -->
             {dede:list pagesize='12'}
-            <div class="col mb-7">
-              <div class="blog-card blog-card-list2">
-                <div class="thumb bg-light p-0 text-center">
+            <div class="col-12 col-md-6 mb-7 ">
+              <div class="blog-card blog-card-list2 rounded border">
+                <!-- <div class="thumb bg-light p-0 text-center">
                   [field:array runphp='yes']
-                  @me = (empty(@me['litpic']) ? "<a href='{@me[' arcurl']}'><img class='product-image rounded-top rounded-5' src='' /></a>" : "<a href='{@me[' arcurl']}'><img class='product-image rounded-top rounded-5' src='{@me[' litpic']}' alt='{@me[' title']}' /></a>");
+                  @me = (empty(@me['litpic']) ? "<a href='{@me['arcurl']}'><img class='product-image rounded-top rounded-5' src='/assets/images/blog/product-1.jpg' alt='{@me['title']}' /></a>" : "<a href='{@me['arcurl']}'><img class='product-image rounded-top rounded-5' src='{@me['litpic']}' alt='{@me[' title']}' /></a>");
                   [/field:array]
-                </div>
+                </div> -->
                 <div class="blog-content">
                   <h3 class="title">
                     <a href="[field:arcurl/]">[field:title/]</a>
                   </h3>
-                  <p class="blog_link_meta">
-                    Posted by <a href="#" class="text-success blog-list-link">HasTech</a> /
-                    27 sep, 2021
-                  </p>
-                  <p>[field:description function='cn_substr(@me,80)'/]...</p>
-                  <a class="blog-list-link" href="blog-details-left-sidebar.html">Read More</a>
+                  <!-- <p class="blog_link_meta">
+                    <a href="[field:phpurl/]/stow.php?aid=[field:id/]" target="_blank">收藏</a>
+                  </p> -->
+                  <p>[field:description/]...</p>
+
                 </div>
               </div>
             </div>

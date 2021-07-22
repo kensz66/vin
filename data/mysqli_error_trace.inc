@@ -803,3 +803,45 @@ Error: You have an error in your SQL syntax; check the manual that corresponds t
 Time2021-07-17 13:23:56
 */
 ?>
+<?php  exit();
+/*
+Page: /plus/view.php?aid=2154
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC' at line 1 <br />Error sql: <font color='red'>SELECT * FROM zaiv4_keywords WHERE rpurl<>'' ORDER BY rank DESC</font>
+Time2021-07-22 07:19:55
+*/
+?>
+<?php  exit();
+/*
+Page: /plus/view.php?aid=2154
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC' at line 1 <br />Error sql: <font color='red'>SELECT * FROM zaiv4_keywords WHERE rpurl<>'' ORDER BY rank DESC</font>
+Time2021-07-22 07:23:21
+*/
+?>
+<?php  exit();
+/*
+Page: /plus/view.php?aid=2154
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC' at line 1 <br />Error sql: <font color='red'>SELECT * FROM zaiv4_keywords WHERE rpurl<>'' ORDER BY rank DESC</font>
+Time2021-07-22 07:24:08
+*/
+?>
+<?php  exit();
+/*
+Page: /plus/view.php?aid=2154
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC' at line 1 <br />Error sql: <font color='red'>SELECT * FROM zaiv4_keywords WHERE rpurl<>'' ORDER BY rank DESC</font>
+Time2021-07-22 07:24:25
+*/
+?>
+<?php  exit();
+/*
+Page: /plus/view.php?aid=2153
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC' at line 1 <br />Error sql: <font color='red'>SELECT * FROM zaiv4_keywords WHERE rpurl<>'' ORDER BY rank DESC</font>
+Time2021-07-22 07:24:53
+*/
+?>
+<?php  exit();
+/*
+Page: /yys/article_edit.php
+Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC' at line 1 <br />Error sql: <font color='red'>SELECT * FROM zaiv4_keywords WHERE rpurl<>'' ORDER BY rank DESC</font>
+Time2021-07-22 07:25:58
+*/
+?>
