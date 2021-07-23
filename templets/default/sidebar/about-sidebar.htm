@@ -1,0 +1,53 @@
+<div class="col-lg-3">
+	<div class="widgets">
+		<div class="widget-card">
+			<h3 class="title"><span><i class="lar la-image"></i> 印花与绣花技术</span></h3>
+			<ul id="offcanvas-menu3" class="blog-ctry-menu">
+				{dede:channelartlist typeid="3" }
+				<li class="border-bottom">
+					{dede:type}
+					<a class="" href="javascript:void(0)">[field:typename /]</a>
+					{/dede:type}
+					<ul class="category-sub-menu bg-light">
+						{dede:channel type='son'}
+						<li class="px-1"><a class="fs-6" href='[field:typeurl/]'>[field:typename/]</a></li>
+						{/dede:channel}
+					</ul>
+				</li>
+				{/dede:channelartlist}
+			</ul>
+		</div>
+		<!-- widget-card end -->
+		<!-- widget-card start -->
+		<div class="widget-card">
+			<h3 class="title"><span>推荐款式</span></h3>
+			<!-- widget-post-list start -->
+			<div class="widget-post-list">
+				<div class="row g-1">
+					{dede:arclist row=8 typeid='4' orderby=click type='image.'}
+					<div class="col-3">
+						<a class="w-25" href="[field:arcurl/]" class="post-thumb">
+							<img class="img-fluid img-thumbnail" src="[field:litpic/]" title="[field:title function='html2text(@me)'/]">
+						</a>
+					</div>
+					{/dede:arclist}
+				</div>
+			</div>
+			<!-- widget-post-list end -->
+		</div>
+		<!-- widget-card end -->
+
+		<!-- widget-card start -->
+		<div class="widget-card">
+			<h3 class="title"><span><i class="las la-tags"></i> 标签</span></h3>
+			<div class="widget-tags">
+				{dede:tag row='15' sort='new' getall='0'} <a class="widget-tag-link" href='[field:link/]'>[field:tag
+					/]</a>
+				{/dede:tag}
+			</div>
+		</div>
+		<!-- widget-card end -->
+
+	</div>
+
+</div>

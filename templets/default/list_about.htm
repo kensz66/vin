@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<!-- head start -->
+
+<head>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+	<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+	<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+	<link rel="shortcut icon" href=" /32x32-favicon.ico" />
+	{dede:include filename="public/style.htm"/}
+</head>
+<!-- head end -->
+
+<body>
+	<!-- header section start -->
+	{dede:include filename="public/header.htm"/}
+	<!-- header section end -->
+
+	<!-- main content start -->
+
+	<!-- bread crumb section start -->
+	{dede:include filename="public/bread.htm"/}
+	<!-- bread crumb section end -->
+
+	<!-- shop product tab start-->
+	<div class="shop-product-tab section-mb">
+		<div class="container">
+
+			<div class="row">
+
+				{dede:field.content/}
+
+
+
+
+
+				{dede:include filename="sidebar/about-sidebar.htm"/}
+
+			</div>
+
+		</div>
+	</div>
+	<!-- shop product tab end-->
+
+	<!-- main content end -->
+
+
+
+
+	<!-- footer section start -->
+	{dede:include filename="public/footer.htm"/}
+	<!-- footer section end -->
+
+	<!-- Modal -->
+	<!-- Scripts -->
+	<!-- Global Vendor, plugins JS -->
+
+	<!-- Vendor JS -->
+	{dede:include filename="public/script.htm"/}
+</body>
+
+</html>
