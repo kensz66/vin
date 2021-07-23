@@ -36,28 +36,9 @@
           <h3 class="blog-details-title">
             {dede:field.title/}
           </h3>
-          <p class="blog-details-meta">
-            Posted by 
-            <a href="#" class="text-success blog-list-link">{dede:field.writer/}</a> {dede:field.pubdate
-            function="MyDate('Y-m-d H:i',@me)"/}
-             点击：
-            <script
-              src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}"
-              type='text/javascript' language="javascript"></script>次
-
-            <a href="{dede:field name='phpurl'/}/stow.php?aid={dede:field.id/}" target="_blank">收藏</a>
-
-
-            <a href="{dede:field name='phpurl'/}/recommend.php?aid={dede:field.id/}" target="_blank">推荐</a>
-
-            <a href="{dede:field name='phpurl'/}/erraddsave.php?aid={dede:field.id/}&title={dede:field.title/}"
-              target="_blank">挑错</a>
-
-            <a href="#" onClick="window.print();">打印</a>
-
-          </p>
+ 
           <!-- blog-qutation start -->
-          <div class="blog-qutation">
+          <div class="blog-qutation p-3 border-bottom border-1 fs-6">
             <p>
               {dede:field.description runphp='yes'}
               if(@me<>'')@me = '
@@ -67,43 +48,38 @@
             </p>
           </div>
           <!-- blog-qutation end -->
-
-
-
           <!-- blog-details-grid start -->
           <div class="blog-details-grid">
             <div class="row mb-n7">
-              <div class="col-12 mb-5">
+              <div class="col-12 mb-1">
                 {dede:field.body/}
               </div>
             </div>
           </div>
-          <!-- blog-details-grid end -->
-          <!-- social-tags start -->
-          <div class="social-tags d-sm-flex justify-content-between align-items-center">
-            <p class="mb-2 mb-sm-0">
-              <i class="fa fa-tags"></i> 责任编辑：{dede:adminname/}
-            </p>
 
-            <!-- social links start-->
-            <ul class="social-links d-flex">
-              <li>
-                <a href="{dede:field name='phpurl'/}/stow.php?aid={dede:field.id/}" target="_blank">收藏</a>
-              </li>
-              <li>
-                <a href="{dede:field name='phpurl'/}/recommend.php?aid={dede:field.id/}" target="_blank">推荐</a>
-              </li>
-              <li>
-                <a href="{dede:field name='phpurl'/}/erraddsave.php?aid={dede:field.id/}&title={dede:field.title/}"
-                  target="_blank">挑错</a>
-              </li>
-              <li>
-                <a href="#" onClick="window.print();">打印</a>
-              </li>
-            </ul>
+
+          <div class="social-tags d-sm-flex justify-content-between align-items-center">
+            <div class="col-6">
+              <h4>{dede:prenext get='pre'/}</h4>
+            </div>
+            <div class="col-6">
+              <h4>{dede:prenext get='next'/}</h4>
+            </div>
 
             <!-- social links end-->
           </div>
+
+          <div class="blog-details-grid">
+            <div class="row mb-n7">
+
+            </div>
+          </div>
+
+
+
+
+          <!-- blog-details-grid end -->
+          <!-- social-tags start -->
           <!-- social-tags end -->
         </div>
       </div>

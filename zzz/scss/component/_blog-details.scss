@@ -1,11 +1,22 @@
 .blog-details-content {
   p {
-    line-height: 2.1;
+    line-height: 1.7;
+    letter-spacing: 1.2px;
+    text-indent: 36px;
+    font-size: 18px;
+    word-break: break-all;
+
+    
     &:last-child {
       margin-bottom: 0;
     }
   }
 }
+
+
+
+
+
 
 .blog-details-thumb {
   margin-bottom: 25px;
@@ -62,11 +73,11 @@
   @include max-screen(991) {
     padding: 20px;
   }
-  margin: 50px 0px;
+  margin: 20px 0px;
   border-bottom: 5px solid $success;
   P {
     color: $dark;
-    line-height: 1.777;
+    line-height: 1.7;
     font-size: 18px;
     @include max-screen(767) {
       font-size: 15px;

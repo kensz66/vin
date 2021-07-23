@@ -3,7 +3,7 @@
 	<div class="widgets">
 		<!-- widget-card start -->
 		<div class="widget-card">
-			<h3 class="title"><span>相关参考</span></h3>
+			<h3 class="title"><span><i class="las la-book-reader"></i> 相关参考</span></h3>
 			<div class="widget-list border rounded-3">
 
 				<ul class="list-group list-group-flush">
@@ -19,12 +19,12 @@
 		<!-- widget-card end -->
 		<!-- widget-card start -->
 		<div class="widget-card">
-			<h3 class="title"><span>推荐阅读</span></h3>
+			<h3 class="title"><span><i class="las la-thumbs-up"></i> 推荐阅读</span></h3>
 			<!-- widget-post-list start -->
 			<div class="widget-post-list">
 				<div class="row g-1">
 					{dede:arclist row=8 orderby=click type='image.'}
-					<div class="col-12">
+					<div class="col-12"><i class="lab la-readme"></i>
 						<a class="w-25" href="[field:arcurl/]" class="post-thumb">
 							[field:title function='html2text(@me)'/]
 						</a>
@@ -38,7 +38,7 @@
 
 		<!-- widget-card start -->
 		<div class="widget-card">
-			<h3 class="title"><span>TAG</span></h3>
+			<h3 class="title"><span><i class="las la-tags"></i> TAG</span></h3>
 			<div class="widget-tags">
 				{dede:tag row='15' sort='new' getall='0'} <a class="widget-tag-link" href='[field:link/]'>[field:tag
 					/]</a>
