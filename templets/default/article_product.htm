@@ -43,7 +43,7 @@
                   <!-- <span class="badge bg-success product-badge">new</span> -->
                   <div class="swiper-container">
                     <div class="swiper-wrapper">
-                      {dede:field.details function=get_html_big_pics(@me,0)/}
+                      {dede:field.details function=get_pics_code(@me,0,'big')/}
                     </div>
                   </div>
 
@@ -52,7 +52,7 @@
                 <div class="gallery-thumbs">
                   <div class="swiper-container">
                     <div class="swiper-wrapper">
-                      {dede:field.details function=get_html_lit_pics(@me,0)/}
+                      {dede:field.details function=get_pics_code(@me,0,'lit')/}
                     </div>
                   </div>
                 </div>
@@ -89,7 +89,7 @@
                   {dede:include filename="product/product-size.htm"/}
                 </div>
 
-                 <!--<div class="product-add-to-cart">
+                <!--<div class="product-add-to-cart">
                   <span class="control-label">面料</span>
 
                   <div class="product-count style d-flex my-7">
@@ -124,20 +124,19 @@
                       <li class="pinterest"><a href="#" target="_blank"><i class="lab la-pinterest"></i></a></li>
                     </ul>
                   </div> -->
-                </div>
-
               </div>
+
             </div>
           </div>
         </div>
-
       </div>
+
       {dede:include filename="sidebar/product-sidebar.htm"/}
-
-
     </div>
 
+
   </div>
+
 </div>
 <!-- shop product tab end-->
 
@@ -156,7 +155,7 @@
 
 
 <!-- modal -->
-{dede:field.details function=get_html_modal_pics(@me,0)/}
+{dede:field.details function=get_modal_pics_code(@me,0)/}
 
 
 </body>

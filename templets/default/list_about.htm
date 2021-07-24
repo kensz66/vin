@@ -34,6 +34,70 @@
 
 				{dede:field.content/}
 
+				<div class="col-lg-9" id="page-sidebar">
+					<div class="aboutus">
+						<h3>
+							请立即电话联系我们，马上获得专业的咨询。</h3>
+						<hr />
+					</div>
+					<div class="row">
+						<div class="article control-group">
+							<!--BEGIN: commetns form-->
+							<form action="/plus/diy.php" enctype="multipart/form-data" id="comment-form" method="post">
+								<input name="action" type="hidden" value="post" /> <input name="diyid" type="hidden" value="1" /> <input name="do" type="hidden" value="2" />
+								<div class="span5 well alignright">
+									<h2>
+										成都麟飞服饰有限公司</h2>
+									<br />
+									<p>
+										地址：四川省成都市二环路西三段85号</p>
+									<p>
+										总机：028-87766773</p>
+									<p>
+										Email:<a href="mailto=marketing@workwear5.cn">marketing@workwear5.cn</a></p>
+								</div>
+								<p class="span4 alignleft">
+									<input id="name" name="name" onblur="if(this.value=='') this.value='您的称呼'" onfocus="if(this.value=='您的称呼') this.value=''" type="text" value="您的称呼" />
+								</p>
+								<p class="span4 alignleft">
+									<input class="required" id="tel" name="tel" onblur="if(this.value=='') this.value='电话或手机号'" onfocus="if(this.value=='电话或手机号') this.value=''" type="text" value="电话或手机号" />
+								</p>
+								<p class="span4 alignleft">
+									<input class="required" id="qq" name="qq" onblur="if(this.value=='') this.value='QQ号码'" onfocus="if(this.value=='QQ号码') this.value=''" type="text" value="QQ号码" />
+								</p>
+								<p class="span4 alignleft">
+									<input class="required" id="company" name="company" onblur="if(this.value=='') this.value='单位名称'" onfocus="if(this.value=='单位名称') this.value=''" type="text" value="单位名称" />
+								</p>
+								<p class="span9">
+									留言:<textarea class="required" cols="1" id="content" name="content" rows="1"></textarea><input name="dede_fields" type="hidden" value="name,text;tel,text;qq,text;content,multitext;company,text" /> <input name="dede_fieldshash" type="hidden" value="abefba6378f01b769332421bc6183fe7" /></p>
+								<p class="span3">
+									<input class="button" name="submit" type="submit" value="提 交" />
+								</p>
+							</form>
+						</div>
+						<div class="alert alert-success" id="progress" style="display:none;">
+							Loading...</div>
+						<!--END: comments form-->
+						<script type="text/javascript">
+							$(document).ready(function() {
+								//CONTACT FORM
+								var options = {
+									target: '#progress',
+									success: showResponse
+								}
+								$("#comment-form").validate({
+									submitHandler: function(form) {
+										$(form).ajaxSubmit(options);
+									}
+								});
+
+								function showResponse() {
+									$('#progress').fadeIn(500).delay(3000).fadeOut(500);
+								}
+							});
+						</script>
+					</div>
+				</div>
 
 
 
