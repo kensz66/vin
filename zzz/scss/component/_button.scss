@@ -16,6 +16,11 @@
       background-color: $success;
       border-color: $success;
     }
+    @if $name == info {
+      color: $dark;
+      background-color: $brown;
+      border-color: $brown;
+    }
 
     &:hover {
       border-color: $value;
@@ -29,6 +34,11 @@
         color: $white;
         background-color: $success;
         border-color: $success;
+      }
+      @if $name == info  {
+        color: $dark;
+        // background-color: $success;
+        // border-color: $success;
       }
       @if $name == success {
         color: $white;

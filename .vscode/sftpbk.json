@@ -1,0 +1,28 @@
+{
+    "name": "aliyun",
+    "host": "139.224.112.4",
+    "protocol": "sftp",
+    "port": 22,
+    "username": "root",
+    "privateKeyPath": "/mnt/j/system/Documents/.ssh/id_rsa",
+    "remotePath": "/data/wwwroot/workwear5",
+    "uploadOnSave": true,
+    "syncOption": {
+        "delete":true,
+        "skipCreate": true,
+        "ignoreExisting": true,
+        "update": true
+    },
+    "ignore": [
+        ".vscode",
+        ".git",
+        ".DS_Store",
+        "data/**",
+        "node_modules/**"
+    ],
+    "watcher": {
+        "files": "**/*",
+        "autoUpload": true,
+        "autoDelete": true
+    }
+}

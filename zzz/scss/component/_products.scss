@@ -18,6 +18,9 @@
   padding: 0px 10px;
   position: relative;
   background: $white;
+  // border: 1px solid $dark;
+  border-radius: 10px;
+  // overflow: hidden;
   &::after {
     display: block;
     position: absolute;
@@ -27,7 +30,7 @@
     left: 0;
     right: 0;
     background-color: #fff;
-    box-shadow: 0 0 29.7px 0.3px rgba(0, 0, 0, 0.11);
+    box-shadow: 0 0 20.7px 0.3px rgba(0, 0, 0, 0.2);
     z-index: -1;
     pointer-events: none;
     transform: rotateX(45deg);

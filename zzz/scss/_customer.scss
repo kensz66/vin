@@ -1,42 +1,43 @@
 // 通用部分
 
 ::selection {
-  background-color: $pink;
+  background-color: $gray-800;
   color: $white;
 }
 
+
 @keyframes pulse {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba($pink, 0.7);
-    box-shadow: 0 0 0 0 rgba($pink, 0.7)
+    -webkit-box-shadow: 0 0 0 0 rgba($primary, 0.7);
+    box-shadow: 0 0 0 0 rgba($primary, 0.7)
   }
 
   70% {
-    -webkit-box-shadow: 0 0 0 10px rgba($pink, 0);
-    box-shadow: 0 0 0 10px rgba($pink, 0)
+    -webkit-box-shadow: 0 0 0 5px rgba($primary, 0);
+    box-shadow: 0 0 0 5px rgba($primary, 0)
   }
 
   100% {
-    -webkit-box-shadow: 0 0 0 0 rgba($pink, 0);
-    box-shadow: 0 0 0 0 rgba($pink, 0)
+    -webkit-box-shadow: 0 0 0 0 rgba($primary, 0);
+    box-shadow: 0 0 0 0 rgba($primary, 0)
   }
 }
 
 
 @keyframes pulse-1 {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba($indigo, 0.7);
-    box-shadow: 0 0 0 0 rgba($indigo, 0.7)
+    -webkit-box-shadow: 0 0 0 0 rgba($info, 0.7);
+    box-shadow: 0 0 0 0 rgba($info, 0.7)
   }
 
   70% {
-    -webkit-box-shadow: 0 0 0 10px rgba($indigo, 0);
-    box-shadow: 0 0 0 10px rgba($indigo, 0)
+    -webkit-box-shadow: 0 0 0 10px rgba($info, 0);
+    box-shadow: 0 0 0 10px rgba($info, 0)
   }
 
   100% {
-    -webkit-box-shadow: 0 0 0 0 rgba($indigo, 0);
-    box-shadow: 0 0 0 0 rgba($indigo, 0)
+    -webkit-box-shadow: 0 0 0 0 rgba($info, 0);
+    box-shadow: 0 0 0 0 rgba($info, 0)
   }
 }
 
@@ -46,6 +47,18 @@
   border-bottom: 1px solid #d8d8d8;
   padding: 0;
   background-color: #f5f5f5;
+}
+.main-nav-height {
+  height: 80px;
+  @include max-screen(992){
+    height: 70px;
+  }
+  @include max-screen(768){
+    height: 65px;
+  }
+  @include max-screen(576){
+    height: 55px;
+  }
 }
 
 .telephone {
@@ -134,6 +147,12 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+// @media (max-width: 576px) {
+//  .service-icon {
+//    width: 100%;
+//    min-height: 200px;
+//  }   
+// }
 
 .polo-svg {
   background-image: url("../images/svg/polo.svg");
@@ -207,8 +226,8 @@
     animation: pulse 2s infinite;
     border-radius: 50px;
     &:hover{
-      background-color: lighten($pink, 10%);
-      border-color: lighten($pink, 10%);
+      background-color: lighten($info, 10%);
+      border-color: lighten($info, 10%);
     }
 }
 
@@ -217,10 +236,10 @@
     // display: none;
     position: fixed;
     right: 50px;
-    bottom: 100px;
+    bottom: 70px;
     z-index: 215;
     color: #fff;
-    background: $indigo;
+    background: $info;
     width: 40px;
     height: 40px;
     line-height: 40px;
@@ -250,17 +269,21 @@
     right: 20px;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   #scrollUp, .phone-right {
     right: 10px;
   }
 }
 
 .link-hover:hover {
-  color: $pink!important;
+  color: $info!important;
 }
 
-
+@media (max-width: 768px) {
+  .bg-md-intro {
+    background-color: $info;
+  }
+}
 
 
 

@@ -3,23 +3,24 @@
 $gray-100: #f9f9f9;
 $gray-600: #666666;
 $gray-800: #1a2225;
+$black: black;
 
 // Other Colors
-$blue: #574186;
+$blue: #2C2E43;
 $red: #ce1a21;
 $red-light: #c26565;
 $yellow: #f48120;
-$pink: #ea4c89;
-$pink-light: tint-color($pink, .5);
-$cyan: #3d84c5;
+$gold: #D9B366;
+$gold-light: tint-color($gold, .5);
+$brown: #FAEBD4;
 $cyan-dark: #6574c2;
 
 // Theme Color
 $primary: $blue;
-$secondary: $gray-600;
-$success: $pink;
-$success-light: $pink-light;
-$info: $cyan;
+$secondary: $black;
+$success: $blue;
+$success-light: $gold-light;
+$info: $gold;
 $info-dark: $cyan-dark;
 $warning: $yellow;
 $danger: $red;
@@ -43,7 +44,9 @@ $theme-colors: (
 // scss-docs-end theme-colors-map
 
 // body color
-$body-color: $gray-600;
+// $body-bg:                   $light !default;
+// $body-text-align:           null !default;
+$body-color: $dark;
 $heading-color: $gray-800;
 
 $borderColor: #ebebeb;
@@ -51,6 +54,7 @@ $borderColor: #ebebeb;
 $boxshadow: rgba(0, 0, 0, .15);
 
 $camel: #c19a6b;
+$hover-color: $primary;
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
@@ -70,11 +74,11 @@ $spacers: (
   3: $spacer * 1,
   4: $spacer * 1.25,
   5: $spacer * 1.5,
-  6: $spacer * 1.8,
-  7: $spacer * 2.1,
-  8: $spacer * 2.4,
-  9: $spacer * 2.7,
-  10: $spacer * 3,
+  6: $spacer * 1.75,
+  7: $spacer * 2,
+  8: $spacer * 2.25,
+  9: $spacer * 2.5,
+  10: $spacer * 2.75,
 );
 
 // Grid breakpoints

@@ -8,8 +8,9 @@
   width: 100%;
   z-index: 15;
   animation: fadeInDown 0.5s ease-in-out;
-  background: rgba($gray-100, .95) !important;
-  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+  background: rgba($white, 1) !important;
+  border-bottom: 1px solid $gray-300;
+//   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
   transition: all 0.3s linear;
 //   &:hover {
 //     background: $dark !important;

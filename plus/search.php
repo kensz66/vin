@@ -72,13 +72,13 @@ $typeid = intval($typeid);
 
 if($cfg_notallowstr !='' && preg_match("#".$cfg_notallowstr."#i", $keyword))
 {
-    ShowMsg("你的搜索关键字中存在非法内容，被系统禁止！","-1");
+    ShowMsg("你的搜索关键词中存在非法内容，被系统禁止！","-1");
     exit();
 }
 
 if(($keyword=='' || strlen($keyword)<2) && empty($typeid))
 {
-    ShowMsg('关键字不能小于2个字节！','-1');
+    ShowMsg('关键字不能小于2个字！','-1');
     exit();
 }
 

@@ -101,10 +101,11 @@ function server() {
         logFileChanges: true,
         port: 3000,
         online: false,
-        // browser: "chrome",
+        browser: "chrome",
         proxy: {
-            target: "http://v.cn",
+            target: "http://wk.cn"
         },
+         "open": false
     });
 }
 

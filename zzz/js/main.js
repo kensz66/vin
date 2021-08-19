@@ -205,6 +205,8 @@
     speed: 600,
     autoplay: true,
     lazy: true,
+    effect: "fade",
+    // longSwipesMs: 2000,
     fadeEffect: {
       crossFade: true,
     },
@@ -241,7 +243,7 @@
       },
 
       // when window width is >= 480px
-      480: {
+      576: {
         slidesPerView: 2,
       },
 
